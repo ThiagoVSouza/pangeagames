@@ -1,0 +1,16 @@
+{
+  "releaseState": "announce",
+  "releaseDate": null,
+  "steamAppId": null,
+  "stores": {
+    "steam": null,
+    "appStore": null,
+    "googlePlay": null
+  },
+  "platforms": ["Windows", "macOS", "Android", "iOS"],
+  "social": {
+    "discord": null,
+    "x": null,
+    "instagram": null
+  }
+}

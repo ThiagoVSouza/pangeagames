@@ -1,0 +1,30 @@
+{
+  "default": "en",
+  "published": ["en"],
+  "planned": [
+    "pt-BR",
+    "cs",
+    "zh-CN",
+    "ru",
+    "es",
+    "de",
+    "nl",
+    "fr",
+    "it",
+    "pt-PT",
+    "ja",
+    "ko",
+    "pl",
+    "zh-TW",
+    "tr",
+    "sv",
+    "da",
+    "hi",
+    "hu",
+    "fi",
+    "nb",
+    "th",
+    "uk"
+  ],
+  "note": "Add exact approved locale codes to planned, then move each locale to published only after its content has been human-reviewed."
+}

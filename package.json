@@ -1,0 +1,39 @@
+{
+  "name": "pangea-games-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "dev": "tsx watch server/app.ts",
+    "fonts": "node scripts/copy-fonts.mjs",
+    "content": "node scripts/sync-language-options.mjs && node scripts/sync-headers.mjs",
+    "build": "npm run fonts && npm run content && tsc -p tsconfig.json",
+    "start": "node dist/server/app.js",
+    "test": "vitest run tests",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@sendgrid/client": "^8.1.5",
+    "@sendgrid/mail": "^8.1.5",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "zod": "^4.0.14"
+  },
+  "devDependencies": {
+    "@fontsource/noto-sans": "^5.3.0",
+    "@fontsource/noto-sans-jp": "^5.3.0",
+    "@fontsource/noto-sans-kr": "^5.3.0",
+    "@fontsource/noto-sans-sc": "^5.3.0",
+    "@fontsource/noto-sans-tc": "^5.3.0",
+    "@fontsource/noto-sans-thai": "^5.3.0",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.1.0",
+    "tsx": "^4.20.3",
+    "twemoji": "^14.0.2",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
