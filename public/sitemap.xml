@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.pangeagames.com/en/</loc></url>
-  <url><loc>https://www.pangeagames.com/en/press/</loc></url>
-  <url><loc>https://www.pangeagames.com/en/support/</loc></url>
-  <url><loc>https://www.pangeagames.com/en/contact/</loc></url>
-  <url><loc>https://www.pangeagames.com/en/privacy/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url><loc>https://www.pangeagames.com/en/</loc><xhtml:link rel="alternate" hreflang="en" href="https://www.pangeagames.com/en/"/><xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.pangeagames.com/pt-BR/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://www.pangeagames.com/en/"/></url>
+<url><loc>https://www.pangeagames.com/en/press/</loc><xhtml:link rel="alternate" hreflang="en" href="https://www.pangeagames.com/en/press/"/><xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.pangeagames.com/pt-BR/press/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://www.pangeagames.com/en/press/"/></url>
+<url><loc>https://www.pangeagames.com/en/support/</loc><xhtml:link rel="alternate" hreflang="en" href="https://www.pangeagames.com/en/support/"/><xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.pangeagames.com/pt-BR/support/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://www.pangeagames.com/en/support/"/></url>
+<url><loc>https://www.pangeagames.com/en/contact/</loc><xhtml:link rel="alternate" hreflang="en" href="https://www.pangeagames.com/en/contact/"/><xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.pangeagames.com/pt-BR/contact/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://www.pangeagames.com/en/contact/"/></url>
+<url><loc>https://www.pangeagames.com/en/privacy/</loc><xhtml:link rel="alternate" hreflang="en" href="https://www.pangeagames.com/en/privacy/"/><xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.pangeagames.com/pt-BR/privacy/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://www.pangeagames.com/en/privacy/"/></url>
+<url><loc>https://www.pangeagames.com/pt-BR/</loc><xhtml:link rel="alternate" hreflang="en" href="https://www.pangeagames.com/en/"/><xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.pangeagames.com/pt-BR/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://www.pangeagames.com/en/"/></url>
+<url><loc>https://www.pangeagames.com/pt-BR/press/</loc><xhtml:link rel="alternate" hreflang="en" href="https://www.pangeagames.com/en/press/"/><xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.pangeagames.com/pt-BR/press/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://www.pangeagames.com/en/press/"/></url>
+<url><loc>https://www.pangeagames.com/pt-BR/support/</loc><xhtml:link rel="alternate" hreflang="en" href="https://www.pangeagames.com/en/support/"/><xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.pangeagames.com/pt-BR/support/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://www.pangeagames.com/en/support/"/></url>
+<url><loc>https://www.pangeagames.com/pt-BR/contact/</loc><xhtml:link rel="alternate" hreflang="en" href="https://www.pangeagames.com/en/contact/"/><xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.pangeagames.com/pt-BR/contact/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://www.pangeagames.com/en/contact/"/></url>
+<url><loc>https://www.pangeagames.com/pt-BR/privacy/</loc><xhtml:link rel="alternate" hreflang="en" href="https://www.pangeagames.com/en/privacy/"/><xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.pangeagames.com/pt-BR/privacy/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://www.pangeagames.com/en/privacy/"/></url>
 </urlset>

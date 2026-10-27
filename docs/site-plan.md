@@ -7,7 +7,7 @@ The website is the official home of Pangea Games and the conversion-focused laun
 ## Product principles
 
 1. **Lead with the game.** The Outpost artwork, trailer, hook, and gameplay should occupy the first screen. Pangea Games acts as a trusted studio signature rather than competing with the game for attention.
-2. **One primary action per launch phase.** Before release: “Wishlist on Steam.” After release: “Buy on Steam” or “Play now.” Mobile store links remain secondary until their releases are live.
+2. **One primary action per launch phase.** Before release: “Wishlist on Steam.” After release: “Buy on Steam” or “Play now.” The supported game platforms are Windows and macOS.
 3. **Show, then explain.** A short gameplay trailer and strong screenshots should precede longer feature descriptions.
 4. **Fast and accessible.** Optimize images/video, use semantic HTML, support keyboard and reduced-motion users, and target WCAG 2.2 AA.
 5. **Low-maintenance by design.** Static pages plus narrowly scoped serverless endpoints keep cost, operational burden, and attack surface small.
@@ -24,7 +24,7 @@ A single, polished game-first landing page:
 - Game pitch: one short paragraph answering what the player does and why the game is distinctive.
 - Feature highlights: three to five concrete features, each supported by gameplay imagery.
 - Gallery: six to eight curated screenshots; avoid concept art presented as gameplay.
-- Platforms: Steam for Windows and macOS first; official App Store and Google Play badges when listings exist. Never show dead store buttons—use “Coming later” text or newsletter signup instead.
+- Platforms: Steam for Windows and macOS. Never show dead store buttons—use “Coming later” text or newsletter signup instead.
 - Newsletter: a concise value proposition such as launch news, demos, and major updates; email field; explicit consent; link to privacy policy.
 - Community: Discord as the primary community destination, with X and Instagram secondary.
 - Footer: studio identity, press kit, support, privacy, terms if needed, social links, copyright, and store trademark notices.
@@ -72,10 +72,10 @@ The privacy policy should explain newsletter and contact/support processing, pro
 | Steam page not public | Watch trailer / Join newsletter | Join Discord |
 | Steam page public, pre-release | Wishlist on Steam | Join newsletter |
 | Demo live | Play demo on Steam | Wishlist on Steam |
-| Released on desktop | Buy on Steam | App/mobile release updates |
+| Released on desktop | Buy on Steam | Join newsletter |
 | Released on all stores | Play now, with store chooser | Join community |
 
-Use official Steam, App Store, and Google Play assets. Add UTM parameters to outbound store links by placement and campaign, while keeping analytics free of personal data.
+Use official Steam assets. Add UTM parameters to outbound store links by placement and campaign, while keeping analytics free of personal data.
 
 ## Visual direction
 
@@ -122,7 +122,7 @@ Use official Steam, App Store, and Google Play assets. Add UTM parameters to out
 Before implementation can reach production quality, collect:
 
 - Final one-sentence hook, short description, feature list, genre, release window/date, price, age rating status, languages, and accessibility features.
-- Steam App ID/store URL; later App Store and Google Play URLs; whether Windows and macOS launch simultaneously.
+- Steam App ID/store URL; whether Windows and macOS launch simultaneously.
 - Trailer URL/file and 6–12 real gameplay screenshots.
 - Transparent/high-resolution game wordmark and Pangea logo; hero/key art without baked-in text; favicon/social-card variants.
 - Discord, X, and Instagram URLs.
@@ -157,5 +157,5 @@ Make release-state changes through configuration: CTA copy, store availability, 
 1. The supplied company name is **Pangea Games**, but the stated domain is **`poangeagames.com`**. Confirm whether that spelling is intentional. If both spellings are owned, use `pangeagames.com` as canonical and redirect the typo; otherwise use the domain actually owned consistently.
 2. Is The Outpost’s Steam page already public? If yes, provide its URL/App ID. If not, the initial primary CTA should be newsletter or Discord until wishlisting is possible.
 3. Does “Twilio account” include an active SendGrid account and Marketing Campaigns plan, or only Twilio messaging/phone products?
-4. Is the mobile release simultaneous with Steam or planned for later? This determines whether mobile badges are active CTAs or only release-notification copy.
+4. Will Windows and macOS launch simultaneously? These are the supported game platforms.
 5. Is the initial site English-only, Portuguese-only, or bilingual?

@@ -2,6 +2,7 @@ import client from "@sendgrid/client";
 import mail from "@sendgrid/mail";
 import { config, sendGridConfigured } from "../config.js";
 import type { ContactInput, NewsletterInput, SupportInput } from "../validation/forms.js";
+import { confirmationLocale, emailText } from "../i18n.js";
 
 if (config.SENDGRID_API_KEY) {
   client.setApiKey(config.SENDGRID_API_KEY);
@@ -51,8 +52,8 @@ export async function sendContact(input: ContactInput, reference: string): Promi
     {
       to: input.email,
       from,
-      subject: `We received your message — ${reference}`,
-      text: `Thank you for contacting Pangea Games. Your reference is ${reference}. We will reply to this email address when we have reviewed your message.`,
+      subject: emailText("email.contact.subject", confirmationLocale(input.preferredLanguage, input.uiLocale), { reference }),
+      text: emailText("email.contact.body", confirmationLocale(input.preferredLanguage, input.uiLocale), { reference }),
     },
   ]);
   return { mode: "sendgrid" };
@@ -74,8 +75,8 @@ export async function sendSupport(input: SupportInput, reference: string): Promi
     {
       to: input.email,
       from,
-      subject: `Support request received — ${reference}`,
-      text: `Thank you for contacting Pangea Games support. Your reference is ${reference}. Keep this reference if you need to follow up.`,
+      subject: emailText("email.support.subject", confirmationLocale(input.preferredLanguage, input.uiLocale), { reference }),
+      text: emailText("email.support.body", confirmationLocale(input.preferredLanguage, input.uiLocale), { reference }),
     },
   ]);
   return { mode: "sendgrid" };

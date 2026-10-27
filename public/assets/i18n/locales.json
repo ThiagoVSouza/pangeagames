@@ -1,0 +1,19 @@
+{
+  "default": "en",
+  "published": [
+    "en",
+    "pt-BR"
+  ],
+  "languages": [
+    {
+      "code": "en",
+      "name": "English",
+      "direction": "ltr"
+    },
+    {
+      "code": "pt-BR",
+      "name": "Português (Brasil)",
+      "direction": "ltr"
+    }
+  ]
+}

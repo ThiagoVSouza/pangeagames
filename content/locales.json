@@ -1,8 +1,10 @@
 {
   "default": "en",
-  "published": ["en"],
+  "published": [
+    "en",
+    "pt-BR"
+  ],
   "planned": [
-    "pt-BR",
     "cs",
     "zh-CN",
     "ru",
@@ -26,5 +28,5 @@
     "th",
     "uk"
   ],
-  "note": "Add exact approved locale codes to planned, then move each locale to published only after its content has been human-reviewed."
+  "note": "English and Brazilian Portuguese have complete local-review catalogs. Add a complete reviewed catalog before publishing another locale."
 }

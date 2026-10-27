@@ -2,8 +2,7 @@
   "routes": [
     {
       "route": "/",
-      "redirect": "/en/",
-      "statusCode": 301
+      "rewrite": "/index.html"
     }
   ],
   "responseOverrides": {
