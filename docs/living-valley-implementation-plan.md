@@ -10,8 +10,8 @@ The production site will be a small dynamic Node.js application hosted as its ow
 
 - Canonical public hostname: **`www.pangeagames.com`**.
 - English is the default language, with architecture for 20+ translated languages.
-- The Outpost is planned for Windows and macOS through Steam, plus Android and iOS.
-- No Steam, App Store, or Google Play listings exist yet.
+- The Outpost is planned for Windows and macOS through Steam.
+- No Steam listing exists yet.
 - No final trailer, screenshots, or social destinations exist yet; use clearly marked mock content during implementation.
 - SendGrid is not configured yet. The server integration will read future credentials exclusively from Azure App Service environment variables.
 - Public frontend files and private SendGrid/server code will live in separate `public/` and `server/` folders.
@@ -40,7 +40,7 @@ The production site will be a small dynamic Node.js application hosted as its ow
 - News/blog until Pangea can maintain a publishing cadence.
 - Games index until the studio has a second title.
 - User accounts, customer portal, database, and full ticketing system.
-- App Store and Google Play buttons until real listings exist.
+- Store buttons until a real Steam listing exists.
 - Localization beyond the initial agreed language set.
 
 ## 3. Production stack
@@ -201,7 +201,7 @@ Each block requires one real gameplay image or clip that proves the claim in its
 
 ### `PlatformPanel`
 
-- Current state: show “Coming to Windows, macOS, Android, and iOS” without clickable store badges.
+- Current state: show “Coming to Windows and macOS” without clickable store badges.
 - Until a Steam page exists, the primary conversion is “Get release updates,” leading to the newsletter form.
 - When Steam becomes public, promote “Wishlist on Steam” to the primary CTA.
 - After release, show a store chooser controlled from centralized release configuration.
@@ -271,8 +271,6 @@ interface GameConfig {
   steamAppId?: string;
   stores: {
     steam?: string;
-    appStore?: string;
-    googlePlay?: string;
   };
   platforms: string[];
   social: {
@@ -283,7 +281,7 @@ interface GameConfig {
 }
 ```
 
-All CTA labels and availability states derive from this configuration so launch-day changes do not require editing multiple templates. The initial value is `announce`, with no store URLs and platforms set to Windows, macOS, Android, and iOS.
+All CTA labels and availability states derive from this configuration so launch-day changes do not require editing multiple templates. The initial value is `announce`, with no store URLs and platforms set to Windows and macOS.
 
 ## Localization architecture
 
@@ -366,7 +364,7 @@ Email is not durable ticket storage. If support volume grows, replace the delive
 - Favicon set and platform-independent app icon.
 - 1200×630 social-sharing image.
 - Press-kit originals and a versioned ZIP.
-- Official Steam, App Store, and Google Play badges when applicable.
+- Official Steam badges when applicable.
 
 ### Asset pipeline
 

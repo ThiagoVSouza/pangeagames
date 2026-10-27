@@ -1,0 +1,261 @@
+/* Generated from the approved Outpost library. Catalog layout is intentionally excluded. */
+@font-face{font-family:"Outpost Cinzel";src:url("assets/fonts/Cinzel-Variable.ttf") format("truetype");font-weight:400 900;font-display:swap}
+@font-face{font-family:"Outpost Noto";src:url("assets/fonts/NotoSans-Variable.ttf") format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Outpost Arabic";src:url("assets/fonts/NotoSansArabic-Variable.ttf") format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Outpost Devanagari";src:url("assets/fonts/NotoSansDevanagari-Variable.ttf") format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Outpost Thai";src:url("assets/fonts/NotoSansThai-Variable.ttf") format("truetype");font-weight:100 900;font-display:swap}
+:root{color-scheme:light;--op-ink:#362719;--op-muted:#6e593e;--op-cream:#f4e5c5;--op-paper:#edddbb;--op-bronze:#a38345;--op-blue:#215f90;--op-green:#38643e;--op-red:#8c302b;--op-oxblood:#632e29;--op-focus:#3f7899;--op-body:"Outpost Noto","Outpost Arabic","Outpost Thai","Outpost Devanagari","Outpost SC",sans-serif;--op-display:"Outpost Cinzel",serif;--op-speed:140ms;--op-text-scale:1}
+:lang(ja){font-family:"Outpost JP",var(--op-body);font-weight:400}
+:lang(ko){font-family:"Outpost KR",var(--op-body);font-weight:425}
+:lang(zh-CN){font-family:"Outpost SC",var(--op-body);font-weight:400}
+:lang(zh-TW){font-family:"Outpost TC",var(--op-body);font-weight:375}
+:lang(ar){font-family:"Outpost Arabic",var(--op-body)}
+:lang(th){font-family:"Outpost Thai",var(--op-body)}
+.op-titlebar,.op-card strong{font-family:var(--op-display);font-weight:400}
+.op-titlebar::before{content:"";position:absolute;inset:8px 8px 4px;z-index:-1;pointer-events:none;background:url("assets/godot/header-velvet.png") repeat}
+.op-panel{position:relative;isolation:isolate;min-width:0;background:none;box-shadow:0 5px 12px #140e0833}
+.op-panel::after{content:"";position:absolute;inset:0;pointer-events:none;border-style:solid;border-color:transparent;border-width:24px 21px;border-image:url("assets/godot/panel-frame.png") 24 21 /24px 21px/0 stretch;z-index:4}
+.op-titlebar{position:relative;display:flex;align-items:center;min-height:56px;padding:18px 24px 10px;color:var(--op-cream);font-size:1.5em;line-height:1.4;overflow-wrap:anywhere;background:none}
+.op-titlebar::after{content:"";position:absolute;inset:auto 7px 0;height:4px;border:0 solid transparent;border-image:url("assets/godot/panel-divider.png") 0 8 fill /0 8px/0 stretch;z-index:3;pointer-events:none}
+.op-panel__body{padding:20px 24px 24px}
+.op-titlebar__ornaments{display:none}
+.op-button-slot{display:grid;place-items:center;padding:20px 12px;min-height:88px}
+.op-button-slot--wide{flex:1}
+.op-button{--op-velvet:url("assets/godot/velvet-primary.png");position:relative;isolation:isolate;min-width:min(156px,100%);min-height:48px;max-width:100%;padding:12px 18px;border:0;background:transparent;color:var(--op-cream);line-height:1.35;overflow-wrap:anywhere;cursor:pointer;transition:transform var(--op-speed),filter var(--op-speed);filter:drop-shadow(0 3px 4px #140d0830)}
+.op-button::before{content:"";position:absolute;inset:0;z-index:-1;border:5px solid transparent;border-image:url("assets/godot/button-frame.png") 9 /9px/0 stretch;background:var(--op-velvet) repeat padding-box;background-clip:padding-box;pointer-events:none}
+.op-button::after{content:"";position:absolute;inset:0;z-index:-2;border:0 solid transparent;border-image:url("assets/godot/button-halo.png") 29 fill /29px/20px stretch;opacity:0;pointer-events:none}
+.op-button i{display:none}
+.op-button--secondary{--op-velvet:url("assets/godot/velvet-secondary.png");color:var(--op-ink)}
+.op-button--confirm{--op-velvet:url("assets/godot/velvet-confirm.png")}
+.op-button--destructive{--op-velvet:url("assets/godot/velvet-destructive.png")}
+.op-button--oxblood{--op-velvet:url("assets/godot/velvet-oxblood.png")}
+.op-button--compact{min-width:100px}
+.op-button--wide{width:100%}
+.op-button--icon{min-width:48px;width:48px;padding:12px}
+.op-button--icon img{width:24px;height:24px;display:block;margin:auto}
+.op-button:hover:not(:disabled),.op-button.is-hover-demo{transform:scale(var(--op-hover-scale,1.04));filter:brightness(1.10) drop-shadow(0 3px 4px #140d0830)}
+.op-button:active:not(:disabled),.op-button.is-held,.op-button.is-pressed-demo{transform:scale(.96);filter:brightness(.78)}
+.op-button:focus,.op-button.is-focus-demo{outline:0}
+.op-button:focus:not(:disabled)::after,.op-button.is-focus-demo::after{opacity:1}
+.op-button:disabled{--op-velvet:url("assets/godot/velvet-disabled.png");color:#25282a;transform:none;filter:none;cursor:not-allowed}
+.op-button:disabled::before{border-image-source:url("assets/godot/button-frame-disabled.png")}
+.op-button:disabled::after{opacity:0}
+.op-surface,.op-field-shell,.op-scroll-frame{--op-face:#f4e5c5;position:relative;isolation:isolate;background:transparent;min-width:0}
+.op-surface::before,.op-field-shell::before,.op-scroll-frame::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(135deg,#ddc799,#997746 40%,#63513a);clip-path:polygon(8px 0,calc(100% - 8px) 0,100% 8px,100% calc(100% - 8px),calc(100% - 8px) 100%,8px 100%,0 calc(100% - 8px),0 8px)}
+.op-surface::after,.op-field-shell::after,.op-scroll-frame::after{content:"";position:absolute;inset:4px;z-index:-1;pointer-events:none;background:url("assets/godot/paper-grain.png"),linear-gradient(var(--op-face),#eee2cc);clip-path:polygon(6px 0,calc(100% - 6px) 0,100% 6px,100% calc(100% - 6px),calc(100% - 6px) 100%,6px 100%,0 calc(100% - 6px),0 6px)}
+.op-field-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.op-field-label{display:grid;gap:.5rem;min-width:0}
+.op-field-label--wide{grid-column:1/-1}
+.op-field-shell{display:block;filter:drop-shadow(0 2px 5px #140d0825)}
+.op-field{width:100%;min-width:0;min-height:44px;padding:12px;border:0;outline:0;background:transparent;color:var(--op-ink)}
+.op-field::placeholder{color:var(--op-muted)}
+.op-field:disabled,.op-field[readonly]{color:var(--op-muted)}
+.op-field-shell:has(:disabled),.op-field-shell:has([readonly]){--op-face:#dcddd6}
+.op-field-shell:focus-within,.op-scroll-frame:focus-within{filter:drop-shadow(0 0 3px #3f7899a0)}
+.op-field-shell:focus-within{outline:1px solid #3f7899;outline-offset:-3px}
+.op-field-shell:focus-within::before{background:#3f7899}
+.op-mark{display:inline-flex;align-items:center;gap:10px;min-height:44px;position:relative;cursor:pointer}
+.op-mark input{appearance:none;flex:none;width:24px;height:24px;margin:0;background:url("assets/godot/icon-circle.png") center/24px no-repeat;border:0}
+.op-mark input:checked{background-image:url("assets/godot/icon-check.png")}
+.op-mark input[type=radio]:checked{background-image:url("assets/godot/icon-dot.png")}
+.op-mark input:disabled{background-image:url("assets/godot/icon-circle-disabled.png")}
+.op-mark input:checked:disabled{background-image:url("assets/godot/icon-check-disabled.png")}
+.op-mark input[type=radio]:checked:disabled{background-image:url("assets/godot/icon-dot-disabled.png")}
+.op-mark input:focus-visible{outline:1px solid #83a9bb;outline-offset:3px;box-shadow:0 0 3px #457d9c50}
+.op-mark:hover,.op-mark:focus-within{color:#234e6a}
+.op-mark:has(:disabled){color:#8f877a;cursor:not-allowed}
+.op-switch{flex-direction:row-reverse;justify-content:flex-end}
+.op-control-row{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+.op-slider{appearance:none;width:100%;height:44px;margin:0;background:transparent;cursor:pointer;--op-value:50%;--op-track:#d4c7ae;--op-fill:#215f90}
+.op-slider::-webkit-slider-runnable-track{height:8px;border:1px solid #a38e69;border-radius:2px;background:linear-gradient(to right,var(--op-fill) var(--op-value),var(--op-track) var(--op-value))}
+.op-slider::-webkit-slider-thumb{appearance:none;width:32px;height:36px;margin-top:-15px;background:url("assets/godot/slider-handle.png") center no-repeat}
+.op-slider:hover::-webkit-slider-thumb,.op-slider:active::-webkit-slider-thumb{background-image:url("assets/godot/slider-handle-hover.png")}
+.op-slider:disabled{--op-track:#c7c9c6;--op-fill:#969b98;cursor:not-allowed}
+.op-slider:disabled::-webkit-slider-thumb{background-image:url("assets/godot/slider-handle-disabled.png")}
+.op-slider::-moz-range-track{height:8px;background:var(--op-track);border:1px solid #a38e69;border-radius:2px}
+.op-slider::-moz-range-progress{height:8px;background:var(--op-fill)}
+.op-slider::-moz-range-thumb{border:0;border-radius:0;width:32px;height:36px;background:url("assets/godot/slider-handle.png") center no-repeat}
+.op-slider:hover::-moz-range-thumb{background-image:url("assets/godot/slider-handle-hover.png")}
+.op-slider:disabled::-moz-range-thumb{background-image:url("assets/godot/slider-handle-disabled.png")}
+.op-slider:focus-visible{outline:1px solid #83a9bb;outline-offset:2px}
+.op-progress{appearance:none;display:block;width:100%;height:26px;border:1px solid var(--op-bronze);border-radius:2px;background:#b9aa8b;--op-progress-fill:var(--op-blue);overflow:hidden}
+.op-progress[value="100"]{--op-progress-fill:var(--op-green)}
+.op-progress::-webkit-progress-bar{background:#b9aa8b}
+.op-progress::-webkit-progress-value{background:var(--op-progress-fill);border:1px solid var(--op-bronze)}
+.op-progress::-moz-progress-bar{background:var(--op-progress-fill);border:1px solid var(--op-bronze)}
+.op-select{position:relative;min-width:0}
+.op-select__trigger{width:100%;text-align:start;padding-inline-end:44px}
+.op-select__trigger::before{background-image:url("assets/godot/velvet-secondary.png")}
+.op-select__trigger>span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.op-select__trigger>img{position:absolute;inset-inline-end:12px;top:50%;transform:translateY(-50%);width:24px;height:24px}
+.op-select__popup{position:fixed;z-index:50;max-height:360px;overflow:auto;overscroll-behavior:contain;padding:6px;border:1px solid #a38345;box-shadow:0 2px 4px #1a12082e;background:var(--op-cream);color:var(--op-ink);scrollbar-width:thin;scrollbar-color:#a7834b transparent}
+.op-select__option{padding:10px 12px;min-height:40px;overflow-wrap:anywhere;cursor:pointer;border:1px solid transparent}
+.op-select__option.is-active,.op-select__option:hover{background:#dbe6e7;border-color:#8daab4;color:#234e6a}
+.op-select__option[aria-disabled=true]{color:var(--op-muted);cursor:not-allowed}
+.op-select__popup::-webkit-scrollbar{width:10px}
+.op-select__popup::-webkit-scrollbar-track{background:linear-gradient(90deg,transparent 4px,#81643c80 4px 5px,transparent 5px)}
+.op-select__popup::-webkit-scrollbar-thumb{background:#a7834b;border:3px solid var(--op-cream);border-radius:5px}
+.op-native-select{width:100%;min-height:48px;background:var(--op-cream);color:var(--op-ink);border:1px solid var(--op-bronze);padding:10px}
+.op-tabs{display:flex;flex-wrap:wrap;gap:12px;padding:12px 0}
+.op-tabs .op-button{--op-velvet:url("assets/godot/velvet-secondary.png");color:var(--op-ink);flex:1;min-width:120px}
+.op-tabs [aria-selected=true]{--op-velvet:url("assets/godot/velvet-primary.png");color:var(--op-cream)}
+.op-tabpanel{padding:12px 0;overflow-wrap:anywhere}
+.op-scroll-frame{padding:10px}
+.op-scroll{--op-scroll-height:230px;position:relative;height:var(--op-scroll-height);min-width:0}
+.op-scroll__viewport{height:100%;overflow:auto;overscroll-behavior:contain;scrollbar-color:#a7834b var(--op-paper);scrollbar-width:thin}
+.op-scroll.is-enhanced>.op-scroll__viewport{scrollbar-width:none;margin-right:28px}
+.op-scroll.is-enhanced>.op-scroll__viewport::-webkit-scrollbar{display:none}
+.op-scroll__content{min-width:0}
+.op-scroll__rail{position:absolute;right:0;top:0;bottom:0;width:28px;touch-action:none;outline:0;cursor:pointer;background:url("assets/godot/rod-track-v.png") center/28px 1px repeat-y}
+.op-scroll__rail::before,.op-scroll__rail::after{content:"";position:absolute;width:28px;height:12px;left:0;background:url("assets/godot/rod-cap-v.png") center/contain no-repeat}
+.op-scroll__rail::before{top:0}
+.op-scroll__rail::after{bottom:0;transform:rotate(180deg)}
+.op-scroll__thumb{position:absolute;left:3px;width:22px;min-height:24px;border-style:solid;border-color:transparent;border-width:12px 7px;border-image:url("assets/godot/rod-sleeve-normal-v.png") 12 7 fill /12px 7px/0 repeat;pointer-events:auto}
+.op-scroll__rail:hover .op-scroll__thumb{border-image-source:url("assets/godot/rod-sleeve-hover-v.png")}
+.op-scroll__rail:focus .op-scroll__thumb{border-image-source:url("assets/godot/rod-sleeve-focus-v.png")}
+.op-scroll__rail.is-held .op-scroll__thumb{border-image-source:url("assets/godot/rod-sleeve-pressed-v.png")}
+.op-scroll__rail[aria-disabled=true]{background-image:url("assets/godot/rod-track-disabled-v.png");cursor:default}
+.op-scroll__rail[aria-disabled=true] .op-scroll__thumb{border-image-source:url("assets/godot/rod-sleeve-disabled-v.png")}
+.op-scroll__rail[aria-disabled=true]::before,.op-scroll__rail[aria-disabled=true]::after{background-image:url("assets/godot/rod-cap-disabled-v.png")}
+.op-scroll[data-orientation=horizontal]{height:110px}
+.op-scroll[data-orientation=horizontal].is-enhanced>.op-scroll__viewport{margin:0 0 28px;height:calc(100% - 28px)}
+.op-scroll[data-orientation=horizontal] .op-scroll__content{display:flex;gap:24px;width:max-content}
+.op-scroll[data-orientation=horizontal] .op-scroll__rail{inset:auto 0 0;width:auto;height:28px;background-image:url("assets/godot/rod-track-h.png");background-size:1px 28px;background-repeat:repeat-x}
+.op-scroll[data-orientation=horizontal] .op-scroll__rail::before,.op-scroll[data-orientation=horizontal] .op-scroll__rail::after{width:12px;height:28px;top:0;background-image:url("assets/godot/rod-cap-h.png")}
+.op-scroll[data-orientation=horizontal] .op-scroll__rail::after{left:auto;right:0}
+.op-scroll[data-orientation=horizontal] .op-scroll__thumb{top:3px;left:0;height:22px;min-width:24px;min-height:0;border-width:7px 12px;border-image:url("assets/godot/rod-sleeve-normal-h.png") 7 12 fill /7px 12px/0 repeat}
+.op-scroll[data-orientation=horizontal] .op-scroll__rail:hover .op-scroll__thumb{border-image-source:url("assets/godot/rod-sleeve-hover-h.png")}
+.op-scroll[data-orientation=horizontal] .op-scroll__rail:focus .op-scroll__thumb{border-image-source:url("assets/godot/rod-sleeve-focus-h.png")}
+.op-scroll[data-orientation=horizontal] .op-scroll__rail.is-held .op-scroll__thumb{border-image-source:url("assets/godot/rod-sleeve-pressed-h.png")}
+.op-list{list-style:none;margin:0;padding:0}
+.op-list [role=option]{display:block;width:100%;padding:12px;text-align:start;background:transparent;color:var(--op-ink);border:1px solid transparent;cursor:pointer;overflow-wrap:anywhere}
+.op-list [role=option]:hover{background:#eeeade;border-color:#c6c6b6}
+.op-list [aria-selected=true]{background:#e4e9e6;border-color:#8daab4;color:#234e6a}
+.op-list [role=option]:focus-visible{outline:1px solid #83a9bb;outline-offset:-3px}
+.op-empty{padding:16px;color:var(--op-muted)}
+.op-domain-row{display:flex;justify-content:space-between;gap:16px;padding:16px 12px;min-height:70px}
+.op-card-group{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px}
+.op-card-slot{display:grid;place-items:center;padding:24px 16px;min-width:0}
+.op-card{position:relative;isolation:isolate;width:220px;max-width:100%;border:0;padding:0;background:transparent;color:var(--op-ink);cursor:pointer;overflow:visible;transition:transform var(--op-speed),filter var(--op-speed);filter:drop-shadow(0 2px 5px #37271945)}
+.op-card::before{content:"";position:absolute;inset:0;z-index:-2;border:28px solid transparent;border-image:url("assets/godot/card-halo.png") 28 fill /28px/20px stretch;opacity:0;pointer-events:none}
+.op-card i{display:none}
+.op-card__art{display:block;position:relative;aspect-ratio:380/215;background:url("assets/godot/card-granary.png") center/cover no-repeat;border:4px solid transparent;background-clip:padding-box}
+.op-card__art::after{content:"";position:absolute;inset:-4px;pointer-events:none;border-style:solid;border-width:16px 16px 3px;border-image:url("assets/godot/card-top.png") 16 16 3 /16px 16px 3px/0 stretch}
+.op-card[data-card=spearmen] .op-card__art{background-image:url("assets/godot/card-spearmen.png")}
+.op-card[data-card=marcus] .op-card__art{background-image:url("assets/godot/card-marcus.png")}
+.op-card[data-card=grain] .op-card__art{background-image:url("assets/godot/card-grain.png")}
+.op-card__body{position:relative;display:grid;gap:9px;padding:18px 14px 14px;min-height:180px;background:url("assets/godot/card-paper.png") repeat,#f4e5c9}
+.op-card__body::after{content:"";position:absolute;inset:0;border:16px solid transparent;border-image:url("assets/godot/card-bottom.png") 16 /16px/0 stretch;pointer-events:none}
+.op-card__body strong{font-size:20px;font-weight:400}
+.op-card__body small{text-transform:uppercase;font-family:var(--op-display);font-size:11px;letter-spacing:.1em}
+.op-card__body b{border-top:1px solid #aa8b57;padding-top:9px;font-size:14px;font-weight:400}
+.op-card__body>span{font-size:14px}
+.op-card:hover:not(:disabled){transform:scale(1.015)}
+.op-card[aria-checked=true]{transform:scale(1.08)}
+.op-card[aria-checked=true]::before{opacity:1}
+.op-card[aria-checked=true] .op-card__body{background-image:linear-gradient(#fffce656,#fffce656),url("assets/godot/card-paper.png")}
+.op-card:active:not(:disabled),.op-card.is-held{transform:scale(.95);filter:brightness(.84)}
+.op-card[aria-checked=true]:active,.op-card[aria-checked=true].is-held{transform:scale(1.026)}
+.op-card:focus-visible{outline:1px solid #83a9bb;outline-offset:5px}
+.op-card:disabled{filter:grayscale(1);opacity:.65;cursor:not-allowed}
+.op-live{color:var(--op-muted);font-size:.875em;min-height:1.5em}
+.op-status-message{padding:12px;border:2px solid var(--op-blue);background:#f4e5c5;overflow-wrap:anywhere}
+.op-status-message--success{border-color:var(--op-green)}
+.op-status-message--error{border-color:var(--op-red)}
+.op-status-message--warning{border-color:#a38345}
+.op-dialog{border:0;padding:0;width:min(620px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;background:transparent;color:var(--op-ink)}
+.op-dialog::backdrop{background:#000a}
+.op-dialog .op-panel__body{display:grid;gap:20px}
+.op-dialog__message{max-height:30dvh;overflow:auto;min-height:80px;margin:0}
+.op-dialog__actions{display:flex;justify-content:space-between;gap:24px;padding:8px 0}
+.op-tooltip{position:fixed;z-index:80;max-width:min(320px,calc(100vw - 16px));padding:12px;background:var(--op-cream);color:var(--op-ink);border:1px solid #997746;box-shadow:0 3px 8px #140d0840;pointer-events:none;font-size:.875em}
+.op-binding-grid{display:flex;flex-wrap:wrap;gap:24px}
+.op-binding-grid label{display:grid;gap:12px}
+.op-stepper{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.op-stepper [data-step-readout]{text-align:center}
+.op-marker-grid{display:flex;flex-wrap:wrap;justify-content:space-around;gap:24px;padding:16px}
+.op-marker{position:relative;width:260px;max-width:100%;min-height:80px;text-align:center;color:var(--op-ink)}
+.op-marker__flag{display:block;width:32px;height:20px;margin:0 auto 8px;background:linear-gradient(90deg,#215f90 0 30%,#512126 30%);border:2px solid #a38345}
+.op-marker__row{display:grid;grid-template-columns:28px 1fr 72px;gap:8px;align-items:start;text-align:start;min-height:44px}
+.op-marker__icon{width:24px;height:24px}
+.op-marker__name{overflow-wrap:anywhere}
+.op-marker__population{text-align:end}
+.op-marker--unit .op-marker__row{grid-template-columns:1fr 24px}
+.op-marker--unit>.op-marker__icon{width:40px;height:40px;position:absolute;left:calc(50% - 46px);top:0}
+.op-marker--unit .op-marker__flag{width:20px;height:14px;margin-left:calc(50% + 12px);margin-bottom:34px}
+.op-marker[data-detail=compact] .op-marker__row{grid-template-columns:28px 1fr}
+.op-marker[data-detail=compact] .op-marker__trailing{display:none}
+.op-marker--unit[data-detail=compact] .op-marker__row{grid-template-columns:1fr}
+.op-marker[data-detail=overview] .op-marker__name,.op-marker[data-detail=overview] .op-marker__trailing{display:none}
+.op-marker[data-detail=overview] .op-marker__row{display:block;text-align:center}
+.op-marker[data-detail=overview]{min-height:44px}
+.op-marker[data-detail=overview] .op-marker__flag{position:absolute;top:0;left:calc(50% - 16px)}
+.op-marker[data-detail=overview] .op-marker__icon{width:40px;height:40px}
+.op-marker--unit[data-detail=overview] .op-marker__flag{left:50%;margin-left:10px}
+.op-conversation{display:grid;gap:12px}
+.op-conversation__scenery{pointer-events:none;min-height:28px;color:#6e593e;text-align:center;font-family:var(--op-display)}
+.op-conversation__content{display:grid;gap:12px}
+.op-conversation__messages{padding:12px;display:grid;gap:12px}
+.op-conversation__messages p{margin:0;overflow-wrap:anywhere}
+.op-conversation__messages [data-outgoing]{border-left:2px solid var(--op-bronze);padding-left:10px}
+.op-conversation__footer{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.op-conversation[data-state=minimized] .op-conversation__content{display:none}
+.op-conversation[data-state=closed]{display:none}
+@media(max-width:900px){
+.op-field-grid{grid-template-columns:1fr}
+.op-field-label--wide{grid-column:auto}
+.op-stepper{gap:12px}
+.op-stepper .op-button{min-width:90px}
+.op-panel__body{padding:16px 18px 20px}
+.op-titlebar{padding-inline:21px}
+}
+@media(max-width:560px){
+.op-button-slot{padding-inline:4px}
+.op-dialog__actions{flex-wrap:wrap}
+.op-dialog__actions .op-button{flex:1;min-width:100px}
+.op-stepper{flex-wrap:wrap}
+.op-stepper [data-step-readout]{order:-1;width:100%}
+.op-marker-grid{padding-inline:0}
+.op-conversation__footer{flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){
+.op-button,.op-card{transition:none}
+.op-button:hover,.op-button:active,.op-button.is-held,.op-button.is-hover-demo,.op-button.is-pressed-demo,.op-card:hover,.op-card[aria-checked=true],.op-card:active,.op-card.is-held{transform:none}
+.op-slider:hover::-webkit-slider-thumb{background-image:url("assets/godot/slider-handle.png")}
+.op-slider:hover::-moz-range-thumb{background-image:url("assets/godot/slider-handle.png")}
+}
+.op-reduce-motion .op-button,.op-reduce-motion .op-card{transition:none;transform:none!important}
+.op-field-focus{display:none;position:absolute;inset:0;z-index:-2;pointer-events:none;border:0 solid transparent;border-image:url("assets/godot/field-focus.png") 24 fill /24px/12px stretch}
+.op-field-shell:focus-within{outline:0;filter:drop-shadow(0 2px 5px #140d0825)}
+.op-field-shell:focus-within::before{background:linear-gradient(135deg,#ddc799,#997746 40%,#63513a)}
+.op-field-shell:focus-within>.op-field-focus{display:block}
+.op-scroll[data-orientation=horizontal] .op-scroll__rail[aria-disabled=true]{background-image:url("assets/godot/rod-track-disabled-h.png")}
+.op-scroll[data-orientation=horizontal] .op-scroll__rail[aria-disabled=true] .op-scroll__thumb{border-image-source:url("assets/godot/rod-sleeve-disabled-h.png")}
+.op-scroll[data-orientation=horizontal] .op-scroll__rail[aria-disabled=true]::before,.op-scroll[data-orientation=horizontal] .op-scroll__rail[aria-disabled=true]::after{background-image:url("assets/godot/rod-cap-disabled-h.png")}
+.op-panel::before{content:"";position:absolute;inset:8px;z-index:-1;pointer-events:none;background:url("assets/godot/paper-grain.png"),linear-gradient(#f4e6c6,#efe0c1)}
+.op-surface::before,.op-field-shell::before,.op-scroll-frame::before,.op-field-shell:focus-within::before{background:none;clip-path:none;border:0 solid transparent;border-image:url("assets/svg/surface-frame.svg") 12 /12px/0 stretch}
+.op-field-shell:has(:disabled)::before,.op-field-shell:has([readonly])::before{border-image-source:url("assets/svg/surface-frame-disabled.svg")}
+.op-field-shell.is-enhanced>textarea{scrollbar-width:none;padding-right:40px;margin-right:0!important}
+.op-field-shell.is-enhanced>textarea::-webkit-scrollbar{display:none}
+.op-field-shell>.op-scroll__rail{inset:10px 7px 10px auto}
+.op-empty{margin:0}
+.op-card{width:var(--op-card-width,220px)}
+.op-card__body{min-height:calc(180px * var(--op-text-scale))}
+.op-card__body strong{font-size:calc(20px * var(--op-text-scale))}
+.op-card__body small{font-size:calc(11px * var(--op-text-scale))}
+.op-card__body>span,.op-card__body b{font-size:calc(14px * var(--op-text-scale))}
+.op-scroll[data-state=hover] .op-scroll__thumb{border-image-source:url("assets/godot/rod-sleeve-hover-v.png")}
+.op-scroll[data-state=pressed] .op-scroll__thumb{border-image-source:url("assets/godot/rod-sleeve-pressed-v.png")}
+.op-scroll[data-state=focus] .op-scroll__thumb{border-image-source:url("assets/godot/rod-sleeve-focus-v.png")}
+.op-select__popup::-webkit-scrollbar-button{display:none;width:0;height:0}
+@supports selector(::-webkit-scrollbar){
+.op-select__popup{scrollbar-width:auto;scrollbar-color:auto}
+}
+.op-card__body{overflow-wrap:anywhere}
+.op-card-slot{grid-template-columns:minmax(0,1fr)}
+.op-domain-row>span{min-width:0;overflow-wrap:anywhere}
+.op-button-slot--wide{flex:1 1 260px}
+@font-face{font-family:"Outpost JP";src:url("assets/fonts/NotoSansJP-Variable.ttf") format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Outpost KR";src:url("assets/fonts/NotoSansKR-Variable.ttf") format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Outpost SC";src:url("assets/fonts/NotoSansSC-Variable.ttf") format("truetype");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Outpost TC";src:url("assets/fonts/NotoSansTC-Variable.ttf") format("truetype");font-weight:100 900;font-display:swap}

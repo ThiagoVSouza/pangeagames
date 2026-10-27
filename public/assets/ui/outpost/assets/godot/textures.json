@@ -1,0 +1,554 @@
+{
+  "button-frame": {
+    "expand": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "height": 39,
+    "slice": [
+      9.0,
+      9.0,
+      9.0,
+      9.0
+    ],
+    "width": 196
+  },
+  "button-frame-disabled": {
+    "expand": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "height": 39,
+    "slice": [
+      9.0,
+      9.0,
+      9.0,
+      9.0
+    ],
+    "width": 196
+  },
+  "button-halo": {
+    "expand": [
+      20.0,
+      20.0,
+      20.0,
+      20.0
+    ],
+    "height": 79,
+    "slice": [
+      29.0,
+      29.0,
+      29.0,
+      29.0
+    ],
+    "width": 236
+  },
+  "button-shadow": {
+    "expand": [
+      12.0,
+      12.0,
+      12.0,
+      12.0
+    ],
+    "height": 63,
+    "slice": [
+      24.0,
+      24.0,
+      24.0,
+      24.0
+    ],
+    "width": 220
+  },
+  "card-bottom": {
+    "expand": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "height": 115,
+    "slice": [
+      16.0,
+      16.0,
+      16.0,
+      16.0
+    ],
+    "width": 240
+  },
+  "card-grain": {
+    "height": 220,
+    "width": 380
+  },
+  "card-granary": {
+    "height": 215,
+    "width": 380
+  },
+  "card-halo": {
+    "expand": [
+      20.0,
+      20.0,
+      20.0,
+      20.0
+    ],
+    "height": 96,
+    "slice": [
+      28.0,
+      28.0,
+      28.0,
+      28.0
+    ],
+    "width": 96
+  },
+  "card-marcus": {
+    "height": 220,
+    "width": 380
+  },
+  "card-paper": {
+    "height": 44,
+    "width": 32
+  },
+  "card-shadow": {
+    "expand": [
+      20.0,
+      20.0,
+      20.0,
+      20.0
+    ],
+    "height": 96,
+    "slice": [
+      28.0,
+      28.0,
+      28.0,
+      28.0
+    ],
+    "width": 96
+  },
+  "card-spearmen": {
+    "height": 215,
+    "width": 380
+  },
+  "card-top": {
+    "expand": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "height": 138,
+    "slice": [
+      16.0,
+      16.0,
+      3.0,
+      16.0
+    ],
+    "width": 240
+  },
+  "field-focus": {
+    "expand": [
+      12.0,
+      12.0,
+      12.0,
+      12.0
+    ],
+    "height": 96,
+    "slice": [
+      24.0,
+      24.0,
+      24.0,
+      24.0
+    ],
+    "width": 96
+  },
+  "field-shadow": {
+    "expand": [
+      12.0,
+      12.0,
+      12.0,
+      12.0
+    ],
+    "height": 96,
+    "slice": [
+      24.0,
+      24.0,
+      24.0,
+      24.0
+    ],
+    "width": 96
+  },
+  "header-velvet": {
+    "height": 100,
+    "width": 1260
+  },
+  "icon-arrow": {
+    "height": 24,
+    "width": 24
+  },
+  "icon-arrow-disabled": {
+    "height": 24,
+    "width": 24
+  },
+  "icon-check": {
+    "height": 24,
+    "width": 24
+  },
+  "icon-check-disabled": {
+    "height": 24,
+    "width": 24
+  },
+  "icon-circle": {
+    "height": 24,
+    "width": 24
+  },
+  "icon-circle-disabled": {
+    "height": 24,
+    "width": 24
+  },
+  "icon-dot": {
+    "height": 24,
+    "width": 24
+  },
+  "icon-dot-disabled": {
+    "height": 24,
+    "width": 24
+  },
+  "icon-handle": {
+    "height": 24,
+    "width": 24
+  },
+  "icon-handle-disabled": {
+    "height": 24,
+    "width": 24
+  },
+  "panel-divider": {
+    "expand": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "height": 4,
+    "slice": [
+      0.0,
+      8.0,
+      0.0,
+      8.0
+    ],
+    "width": 312
+  },
+  "panel-frame": {
+    "expand": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "height": 270,
+    "slice": [
+      24.0,
+      21.0,
+      24.0,
+      21.0
+    ],
+    "width": 312
+  },
+  "panel-shadow": {
+    "expand": [
+      12.0,
+      12.0,
+      12.0,
+      12.0
+    ],
+    "height": 65,
+    "slice": [
+      24.0,
+      24.0,
+      24.0,
+      24.0
+    ],
+    "width": 336
+  },
+  "paper-grain": {
+    "height": 128,
+    "width": 128
+  },
+  "rod-cap-disabled-h": {
+    "height": 28,
+    "width": 13
+  },
+  "rod-cap-disabled-v": {
+    "height": 13,
+    "width": 28
+  },
+  "rod-cap-h": {
+    "height": 28,
+    "width": 13
+  },
+  "rod-cap-v": {
+    "height": 13,
+    "width": 28
+  },
+  "rod-sleeve-disabled-h": {
+    "expand": [
+      -3.0,
+      0.0,
+      -3.0,
+      0.0
+    ],
+    "height": 22,
+    "slice": [
+      7.0,
+      12.0,
+      7.0,
+      12.0
+    ],
+    "width": 156
+  },
+  "rod-sleeve-disabled-v": {
+    "expand": [
+      0.0,
+      -3.0,
+      0.0,
+      -3.0
+    ],
+    "height": 156,
+    "slice": [
+      12.0,
+      7.0,
+      12.0,
+      7.0
+    ],
+    "width": 22
+  },
+  "rod-sleeve-focus-h": {
+    "expand": [
+      -3.0,
+      0.0,
+      -3.0,
+      0.0
+    ],
+    "height": 22,
+    "slice": [
+      7.0,
+      12.0,
+      7.0,
+      12.0
+    ],
+    "width": 156
+  },
+  "rod-sleeve-focus-v": {
+    "expand": [
+      0.0,
+      -3.0,
+      0.0,
+      -3.0
+    ],
+    "height": 156,
+    "slice": [
+      12.0,
+      7.0,
+      12.0,
+      7.0
+    ],
+    "width": 22
+  },
+  "rod-sleeve-hover-h": {
+    "expand": [
+      -3.0,
+      0.0,
+      -3.0,
+      0.0
+    ],
+    "height": 22,
+    "slice": [
+      7.0,
+      12.0,
+      7.0,
+      12.0
+    ],
+    "width": 156
+  },
+  "rod-sleeve-hover-v": {
+    "expand": [
+      0.0,
+      -3.0,
+      0.0,
+      -3.0
+    ],
+    "height": 156,
+    "slice": [
+      12.0,
+      7.0,
+      12.0,
+      7.0
+    ],
+    "width": 22
+  },
+  "rod-sleeve-normal-h": {
+    "expand": [
+      -3.0,
+      0.0,
+      -3.0,
+      0.0
+    ],
+    "height": 22,
+    "slice": [
+      7.0,
+      12.0,
+      7.0,
+      12.0
+    ],
+    "width": 156
+  },
+  "rod-sleeve-normal-v": {
+    "expand": [
+      0.0,
+      -3.0,
+      0.0,
+      -3.0
+    ],
+    "height": 156,
+    "slice": [
+      12.0,
+      7.0,
+      12.0,
+      7.0
+    ],
+    "width": 22
+  },
+  "rod-sleeve-pressed-h": {
+    "expand": [
+      -3.0,
+      0.0,
+      -3.0,
+      0.0
+    ],
+    "height": 22,
+    "slice": [
+      7.0,
+      12.0,
+      7.0,
+      12.0
+    ],
+    "width": 156
+  },
+  "rod-sleeve-pressed-v": {
+    "expand": [
+      0.0,
+      -3.0,
+      0.0,
+      -3.0
+    ],
+    "height": 156,
+    "slice": [
+      12.0,
+      7.0,
+      12.0,
+      7.0
+    ],
+    "width": 22
+  },
+  "rod-track-disabled-h": {
+    "expand": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "height": 28,
+    "slice": [
+      14.0,
+      0.0,
+      14.0,
+      0.0
+    ],
+    "width": 1
+  },
+  "rod-track-disabled-v": {
+    "expand": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "height": 1,
+    "slice": [
+      0.0,
+      14.0,
+      0.0,
+      14.0
+    ],
+    "width": 28
+  },
+  "rod-track-h": {
+    "expand": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "height": 28,
+    "slice": [
+      14.0,
+      0.0,
+      14.0,
+      0.0
+    ],
+    "width": 1
+  },
+  "rod-track-v": {
+    "expand": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "height": 1,
+    "slice": [
+      0.0,
+      14.0,
+      0.0,
+      14.0
+    ],
+    "width": 28
+  },
+  "slider-handle": {
+    "height": 36,
+    "width": 32
+  },
+  "slider-handle-disabled": {
+    "height": 36,
+    "width": 32
+  },
+  "slider-handle-hover": {
+    "height": 36,
+    "width": 32
+  },
+  "velvet-confirm": {
+    "height": 92,
+    "width": 68
+  },
+  "velvet-destructive": {
+    "height": 92,
+    "width": 68
+  },
+  "velvet-disabled": {
+    "height": 92,
+    "width": 68
+  },
+  "velvet-oxblood": {
+    "height": 92,
+    "width": 68
+  },
+  "velvet-primary": {
+    "height": 92,
+    "width": 68
+  },
+  "velvet-secondary": {
+    "height": 92,
+    "width": 68
+  }
+}

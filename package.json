@@ -7,10 +7,13 @@
     "node": ">=22.0.0"
   },
   "scripts": {
-    "dev": "tsx watch server/app.ts",
+    "dev": "npm run content && tsx watch server/app.ts",
+    "preview:local": "npm run content && node --import tsx scripts/preview-local.mjs",
+    "ui:sync": "node scripts/sync-approved-ui.mjs",
     "fonts": "node scripts/copy-fonts.mjs",
-    "content": "node scripts/sync-language-options.mjs && node scripts/sync-headers.mjs",
-    "build": "npm run fonts && npm run content && tsc -p tsconfig.json",
+    "i18n:build": "node scripts/build-locales.mjs",
+    "content": "npm run i18n:build",
+    "build": "npm run ui:sync && npm run fonts && npm run content && tsc -p tsconfig.json",
     "start": "node dist/server/app.js",
     "test": "vitest run tests",
     "typecheck": "tsc -p tsconfig.json --noEmit"

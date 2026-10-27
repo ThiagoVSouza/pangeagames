@@ -1,11 +1,13 @@
 import { z } from "zod";
+import { defaultLocale, replyLanguages, siteLocales } from "../generated/locales.js";
 
 const email = z.string().trim().email().max(254);
 const safeLine = z.string().trim().min(2).max(160).regex(/^[^\r\n]+$/);
 const message = z.string().trim().min(10).max(5_000);
-const language = z.enum(["en", "pt-BR", "zh-CN", "ru", "es", "de", "nl", "fr", "it", "pt-PT", "ja", "ko", "pl", "zh-TW", "tr", "sv", "da", "hi", "fi", "nb", "cs", "hu", "th", "uk"]);
+const language = z.enum(replyLanguages);
 
 const botFields = {
+  uiLocale: z.enum(siteLocales).default(defaultLocale),
   website: z.string().max(0).optional().default(""),
   startedAt: z.coerce.number().int().positive(),
 };
@@ -29,7 +31,7 @@ export const contactSchema = z.object({
 
 export const supportSchema = z.object({
   category: z.enum(["technical", "gameplay", "accessibility", "purchase", "privacy", "other"]),
-  platform: z.enum(["windows", "macos", "android", "ios", "other"]),
+  platform: z.enum(["windows", "macos", "other"]),
   preferredLanguage: language.default("en"),
   name: z.string().trim().max(100).optional().default(""),
   email,

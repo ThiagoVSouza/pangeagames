@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="wrap op-panel nav-shell">
+    <a class="brand" href="/{{locale}}/" aria-label="{{t:common.pangea_games_home}}" data-locale-link><img src="/assets/images/pangea-logo.png" alt=""></a>
+    <button class="op-button op-button--secondary menu-button" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-button>{{t:common.menu}}</button>
+    <nav class="primary-nav" id="primary-nav" aria-label="{{t:common.primary_navigation}}" data-navigation>
+      <a href="/{{locale}}/#game" data-locale-link data-i18n="common.the_game">{{t:common.the_game}}</a>
+      <a href="/{{locale}}/press/" data-locale-link data-i18n="common.press_kit">{{t:common.press_kit}}</a>
+      <a href="/{{locale}}/support/" data-locale-link data-i18n="common.support">{{t:common.support}}</a>
+      <div class="nav-language">
+        <img src="{{localeFlag}}" alt="" data-language-flag>
+        <label class="sr-only" for="site-language">{{t:common.site_language}}</label>
+        <select id="site-language" class="op-native-select" data-op-select data-menu-language>{{siteLanguageOptions}}</select>
+      </div>
+      <a class="op-button op-button--primary nav-cta" href="/{{locale}}/#newsletter" data-locale-link data-i18n="common.get_updates">{{t:common.get_updates}}</a>
+    </nav>
+  </div>
+</header>

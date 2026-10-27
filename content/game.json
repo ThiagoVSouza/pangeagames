@@ -3,11 +3,9 @@
   "releaseDate": null,
   "steamAppId": null,
   "stores": {
-    "steam": null,
-    "appStore": null,
-    "googlePlay": null
+    "steam": null
   },
-  "platforms": ["Windows", "macOS", "Android", "iOS"],
+  "platforms": ["Windows", "macOS"],
   "social": {
     "discord": null,
     "x": null,
